@@ -1,0 +1,9 @@
+# development requirements
+pre-commit == 3.*
+pytest == 7.*
+pytest-cov == 5.*
+build == 1.*
+
+-e . --config-settings editable_mode=compat # avoid issues with static checkers and PEP660
+
+# pinned versions of app dependencies
