@@ -10,13 +10,14 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
+import datetime
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+from pathlib import Path
 
 import sphinx_rtd_theme
-import datetime
-from pathlib import Path
+
+sys.path.insert(0, os.path.abspath('..'))
 import gitbranchpruner
 
 full_version = gitbranchpruner.__version__
@@ -28,7 +29,7 @@ icon_path = str(doc_path / 'images' / 'icon.ico')
 
 project = 'GitBranchPruner'
 author = 'Christophe Van Dijck'
-copyright = '2024 - {}, {}'.format(datetime.date.today().year, author)
+copyright_str = '2024 - {}, {}'.format(datetime.date.today().year, author)
 
 # The short X.Y version.
 version = full_version.split('+')[0]
@@ -69,18 +70,18 @@ source_suffix = {
 }
 
 myst_enable_extensions = [
-    "amsmath",
-    "colon_fence",
-    "deflist",
-    "dollarmath",
-    "fieldlist",
-    "html_admonition",
-    "html_image",
-    "replacements",
-    "smartquotes",
-    "strikethrough",
-    "substitution",
-    "tasklist",
+    'amsmath',
+    'colon_fence',
+    'deflist',
+    'dollarmath',
+    'fieldlist',
+    'html_admonition',
+    'html_image',
+    'replacements',
+    'smartquotes',
+    'strikethrough',
+    'substitution',
+    'tasklist',
 ]
 
 # If true, the current module name will be prepended to all description
@@ -103,7 +104,7 @@ todo_include_todos = True
 # Napoleon options
 napoleon_numpy_docstring = False  # Force consistency, leave only Google
 napoleon_use_rtype = False  # More legible
-napoleon_include_init_with_doc = False 
+napoleon_include_init_with_doc = False
 napoleon_preprocess_types = True
 
 # apidoc options
@@ -136,7 +137,7 @@ html_theme_options = {
     'sticky_navigation': True,
     'navigation_depth': 4,
     'includehidden': True,
-    'titles_only': True
+    'titles_only': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

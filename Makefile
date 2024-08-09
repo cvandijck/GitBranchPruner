@@ -34,7 +34,7 @@ create-env:
 
 install-project:
 	$(info MAKE: Installing project ...)
-	$(PIP) install -r requirements.txt
+	$(PIP) install -e .[dev] --config-settings editable_mode=compat
 
 test:
 	$(info MAKE: Running tests ...)
