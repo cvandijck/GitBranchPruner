@@ -19,17 +19,14 @@ classifiers = [
     'Intended Audience :: Developers',
     'Programming Language :: Python :: 3',
 ]
-dependencies = []
+dependencies = ['gitpython==-3.*']
 dynamic = ['version']
 
 [project.optional-dependencies]
 dev = ['build', 'pytest', 'pytest-cov', 'pre-commit', 'sphinx_rtd_theme']
 
 [project.scripts]
-'gitbranchpruner' = 'gitbranchpruner.__main__:main'
-
-[tool.setuptools.package-data]
-'gitbranchpruner.data' = ['*.*']
+'git-branch-pruner' = 'gitbranchpruner.__main__:main'
 
 [tool.setuptools.dynamic]
 version = { attr = "gitbranchpruner.__version__" }
